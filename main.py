@@ -4,7 +4,6 @@ import requests as req
 from datetime import datetime
 
 #for visualization
-import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -29,10 +28,10 @@ for i in range(iterations):
     # Stop time
     t1 = datetime.now()
     # Save result
-    print(resp.text)
     t_diff = t1 - t0
     elapsed_ms = int(((t_diff.days * 86400000) + (t_diff.seconds * 1000) + (t_diff.microseconds / 1000)) + 0.5)
     times[i] = elapsed_ms
+    print("Request " + str(i+1) + ": " + str(elapsed_ms) + "ms")
 
 print(times)
 plt.plot(np.arange(1, iterations+1, dtype=np.int32), times)
