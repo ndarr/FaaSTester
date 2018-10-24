@@ -30,7 +30,7 @@ def makeRequest(url, header, data):
 
 
 
-#Auslesen der Programmparameter
+#Retrieve parameters
 type = sys.argv[1]
 url = sys.argv[2]
 img_url = sys.argv[3]
